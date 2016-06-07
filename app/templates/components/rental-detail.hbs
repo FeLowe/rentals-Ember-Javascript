@@ -1,5 +1,5 @@
-Located in {{rental.city}}, this {{rental.bedrooms}} bedroom {{rental.type}} is available by arrangement through {{rental.owner}}.
+Located in {{currentRental.city}}, this {{currentRental.bedrooms}} bedroom {{currentRental.type}} is available by arrangement through {{currentRental.owner}}.
 <br>
-<p><img src={{rental.image}} alt={{rental.type}}></p>
-<button {{action 'update' rental}}>Update</button>
-<button {{action 'delete' rental}}>Delete</button>
+<p><img src={{currentRental.image}} alt={{currentRental.type}}></p>
+<button {{action 'deletefromRentalDetailJs' currentRental}}>Delete</button>
+<!-- <button (click)="delete1(currentRental)">Delete</button> -->

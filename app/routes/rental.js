@@ -5,7 +5,8 @@ export default Ember.Route.extend({
     return this.store.findRecord('rental', params.rental_id);
   },
   actions: {
-    update(rental, params){
+    updateActionFromRentalJs(rental, params){
+
       Object.keys(params).forEach(function(key){
         if(params[key]!== undefined){
           rental.set(key, params[key]);
@@ -15,7 +16,7 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
 
-    destroyRental(rental){
+    destroyRentalFromRentalJs(rental){
       rental.destroyRecord();
       this.transitionTo('index');
     }

@@ -2,14 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   actions: {
-    delete(rental) {
+    deletefromRentalDetailJs(rentalToDelete) {
       if (confirm('Are you sure you want to delete this rental?')) {
-        this.sendAction('destroyRental', rental);
+        this.sendAction('destroyRentalComesFromRentalDetailJs', rentalToDelete); //whenever we have sendAction we send it to the parent hbs file(one level up)
+        //this sendAction is like emitter in angular
       }
     },
-
-    update(rental) {
-      this.sendAction('update', rental);
-    }
   }
 });

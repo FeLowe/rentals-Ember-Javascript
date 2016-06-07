@@ -1,3 +1,5 @@
 <h2>More information about {{model.owner}}'s {{model.type}}</h2>
-{{rental-detail rental=model update="update"}}
-{{rental-detail rental=model destroyRental="destroyRental"}}
+{{rental-detail currentRental=model destroyRentalComesFromRentalDetailJs="destroyRentalFromRentalJs"}}
+
+{{update-rental rental=model updateActionFromUptadeRentalJs="updateActionFromRentalJs"}}
+<!-- wharever comes in the right side of the equal and inside the "" is for the corresponding component which is for rental.js -->
